@@ -179,3 +179,4 @@ public extension AlgebraicProduct9 {
 }
 
 // TODO: case-iterable via product collection
+

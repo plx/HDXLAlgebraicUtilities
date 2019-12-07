@@ -250,3 +250,32 @@ extension InlineProduct3 : CaseIterable
   }
   
 }
+
+// -------------------------------------------------------------------------- //
+// MARK: InlineProduct3 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension InlineProduct3 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable,
+  C:Identifiable {
+  
+  public typealias ID = InlineProduct3<
+    A.ID,
+    B.ID,
+    C.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      return ID(
+        self.a.id,
+        self.b.id,
+        self.c.id
+      )
+    }
+  }
+  
+}

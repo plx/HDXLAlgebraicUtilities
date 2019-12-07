@@ -256,3 +256,43 @@ extension Sum5 : CaseIterable
   }
   
 }
+
+// -------------------------------------------------------------------------- //
+// MARK: Sum5 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension Sum5 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable,
+  C:Identifiable,
+  D:Identifiable,
+  E:Identifiable {
+  
+  public typealias ID = Sum5<
+    A.ID,
+    B.ID,
+    C.ID,
+    D.ID,
+    E.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      switch self {
+      case .a(let a):
+        return .a(a.id)
+      case .b(let b):
+        return .b(b.id)
+      case .c(let c):
+        return .c(c.id)
+      case .d(let d):
+        return .d(d.id)
+      case .e(let e):
+        return .e(e.id)
+      }
+    }
+  }
+  
+}

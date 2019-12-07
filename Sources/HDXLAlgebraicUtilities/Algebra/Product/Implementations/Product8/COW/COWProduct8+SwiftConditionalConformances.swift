@@ -213,6 +213,50 @@ extension COWProduct8 : CaseIterable
 }
 
 // -------------------------------------------------------------------------- //
+// MARK: COWProduct8 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension COWProduct8 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable,
+  C:Identifiable,
+  D:Identifiable,
+  E:Identifiable,
+  F:Identifiable,
+  G:Identifiable,
+  H:Identifiable {
+  
+  public typealias ID = COWProduct8<
+    A.ID,
+    B.ID,
+    C.ID,
+    D.ID,
+    E.ID,
+    F.ID,
+    G.ID,
+    H.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      return ID(
+        self.a.id,
+        self.b.id,
+        self.c.id,
+        self.d.id,
+        self.e.id,
+        self.f.id,
+        self.g.id,
+        self.h.id
+      )
+    }
+  }
+  
+}
+
+// -------------------------------------------------------------------------- //
 // MARK: COWProduct8Storage - Equatable
 // -------------------------------------------------------------------------- //
 

@@ -229,3 +229,39 @@ extension Sum4 : CaseIterable
   }
   
 }
+
+// -------------------------------------------------------------------------- //
+// MARK: Sum4 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension Sum4 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable,
+  C:Identifiable,
+  D:Identifiable {
+  
+  public typealias ID = Sum4<
+    A.ID,
+    B.ID,
+    C.ID,
+    D.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      switch self {
+      case .a(let a):
+        return .a(a.id)
+      case .b(let b):
+        return .b(b.id)
+      case .c(let c):
+        return .c(c.id)
+      case .d(let d):
+        return .d(d.id)
+      }
+    }
+  }
+  
+}

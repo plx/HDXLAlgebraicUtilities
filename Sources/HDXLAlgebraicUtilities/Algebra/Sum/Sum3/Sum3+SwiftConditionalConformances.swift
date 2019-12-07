@@ -202,3 +202,35 @@ extension Sum3 : CaseIterable
   }
   
 }
+
+// -------------------------------------------------------------------------- //
+// MARK: Sum3 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension Sum3 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable,
+  C:Identifiable {
+  
+  public typealias ID = Sum3<
+    A.ID,
+    B.ID,
+    C.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      switch self {
+      case .a(let a):
+        return .a(a.id)
+      case .b(let b):
+        return .b(b.id)
+      case .c(let c):
+        return .c(c.id)
+      }
+    }
+  }
+  
+}

@@ -283,3 +283,47 @@ extension Sum6 : CaseIterable
   }
   
 }
+
+// -------------------------------------------------------------------------- //
+// MARK: Sum6 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension Sum6 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable,
+  C:Identifiable,
+  D:Identifiable,
+  E:Identifiable,
+  F:Identifiable {
+  
+  public typealias ID = Sum6<
+    A.ID,
+    B.ID,
+    C.ID,
+    D.ID,
+    E.ID,
+    F.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      switch self {
+      case .a(let a):
+        return .a(a.id)
+      case .b(let b):
+        return .b(b.id)
+      case .c(let c):
+        return .c(c.id)
+      case .d(let d):
+        return .d(d.id)
+      case .e(let e):
+        return .e(e.id)
+      case .f(let f):
+        return .f(f.id)
+      }
+    }
+  }
+  
+}

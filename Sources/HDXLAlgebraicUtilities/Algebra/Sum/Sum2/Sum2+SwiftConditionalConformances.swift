@@ -175,3 +175,31 @@ extension Sum2 : CaseIterable
   }
   
 }
+
+// -------------------------------------------------------------------------- //
+// MARK: Sum2 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension Sum2 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable {
+  
+  public typealias ID = Sum2<
+    A.ID,
+    B.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      switch self {
+      case .a(let a):
+        return .a(a.id)
+      case .b(let b):
+        return .b(b.id)
+      }
+    }
+  }
+  
+}

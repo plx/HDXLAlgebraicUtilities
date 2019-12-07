@@ -160,6 +160,32 @@ extension COWProduct2 : CaseIterable
 }
 
 // -------------------------------------------------------------------------- //
+// MARK: COWProduct2 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension COWProduct2 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable {
+  
+  public typealias ID = COWProduct2<
+    A.ID,
+    B.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      return ID(
+        self.a.id,
+        self.b.id
+      )
+    }
+  }
+  
+}
+
+// -------------------------------------------------------------------------- //
 // MARK: COWProduct2Storage - Equatable
 // -------------------------------------------------------------------------- //
 

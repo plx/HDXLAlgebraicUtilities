@@ -364,3 +364,59 @@ extension Sum9 : CaseIterable
   }
   
 }
+
+// -------------------------------------------------------------------------- //
+// MARK: Sum9 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension Sum9 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable,
+  C:Identifiable,
+  D:Identifiable,
+  E:Identifiable,
+  F:Identifiable,
+  G:Identifiable,
+  H:Identifiable,
+  I:Identifiable {
+  
+  public typealias ID = Sum9<
+    A.ID,
+    B.ID,
+    C.ID,
+    D.ID,
+    E.ID,
+    F.ID,
+    G.ID,
+    H.ID,
+    I.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      switch self {
+      case .a(let a):
+        return .a(a.id)
+      case .b(let b):
+        return .b(b.id)
+      case .c(let c):
+        return .c(c.id)
+      case .d(let d):
+        return .d(d.id)
+      case .e(let e):
+        return .e(e.id)
+      case .f(let f):
+        return .f(f.id)
+      case .g(let g):
+        return .g(g.id)
+      case .h(let h):
+        return .h(h.id)
+      case .i(let i):
+        return .i(i.id)
+      }
+    }
+  }
+  
+}

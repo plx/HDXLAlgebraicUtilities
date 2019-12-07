@@ -279,3 +279,35 @@ extension InlineProduct4 : CaseIterable
   }
 
 }
+
+// -------------------------------------------------------------------------- //
+// MARK: InlineProduct4 - Identifiable
+// -------------------------------------------------------------------------- //
+
+extension InlineProduct4 : Identifiable
+  where
+  A:Identifiable,
+  B:Identifiable,
+  C:Identifiable,
+  D:Identifiable {
+  
+  public typealias ID = InlineProduct4<
+    A.ID,
+    B.ID,
+    C.ID,
+    D.ID
+  >
+  
+  @inlinable
+  public var id: ID {
+    get {
+      return ID(
+        self.a.id,
+        self.b.id,
+        self.c.id,
+        self.d.id
+      )
+    }
+  }
+  
+}
