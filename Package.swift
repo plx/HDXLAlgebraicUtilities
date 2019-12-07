@@ -45,6 +45,14 @@ let package = Package(
         "HDXLTestingUtilities",
         "HDXLCommonUtilities"
       ]
+    ),
+    .testTarget(
+      name: "HDXLAlgebraicUtilitiesCollectionValidation",
+      dependencies: [
+        "HDXLAlgebraicUtilities",
+        "HDXLTestingUtilities",
+        "HDXLCommonUtilities"
+      ]
     )
   ],
   swiftLanguageVersions: [
