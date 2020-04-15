@@ -41,15 +41,15 @@ public extension AlgebraicProduct4
     )
   }
   
-  @inlinable
-  static func +=(
-    lhs: inout Self,
-    rhs: Self) {
-    lhs.a += rhs.a
-    lhs.b += rhs.b
-    lhs.c += rhs.c
-    lhs.d += rhs.d
-  }
+//  @inlinable
+//  static func +=(
+//    lhs: inout Self,
+//    rhs: Self) {
+//    lhs.a += rhs.a
+//    lhs.b += rhs.b
+//    lhs.c += rhs.c
+//    lhs.d += rhs.d
+//  }
   
   @inlinable
   static func -(
@@ -63,15 +63,15 @@ public extension AlgebraicProduct4
     )
   }
   
-  @inlinable
-  static func -=(
-    lhs: inout Self,
-    rhs: Self) {
-    lhs.a -= rhs.a
-    lhs.b -= rhs.b
-    lhs.c -= rhs.c
-    lhs.d -= rhs.d
-  }
+//  @inlinable
+//  static func -=(
+//    lhs: inout Self,
+//    rhs: Self) {
+//    lhs.a -= rhs.a
+//    lhs.b -= rhs.b
+//    lhs.c -= rhs.c
+//    lhs.d -= rhs.d
+//  }
   
 }
 

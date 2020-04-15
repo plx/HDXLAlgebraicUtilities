@@ -56,20 +56,20 @@ public extension AlgebraicProduct9
     )
   }
   
-  @inlinable
-  static func +=(
-    lhs: inout Self,
-    rhs: Self) {
-    lhs.a += rhs.a
-    lhs.b += rhs.b
-    lhs.c += rhs.c
-    lhs.d += rhs.d
-    lhs.e += rhs.e
-    lhs.f += rhs.f
-    lhs.g += rhs.g
-    lhs.h += rhs.h
-    lhs.i += rhs.i
-  }
+//  @inlinable
+//  static func +=(
+//    lhs: inout Self,
+//    rhs: Self) {
+//    lhs.a += rhs.a
+//    lhs.b += rhs.b
+//    lhs.c += rhs.c
+//    lhs.d += rhs.d
+//    lhs.e += rhs.e
+//    lhs.f += rhs.f
+//    lhs.g += rhs.g
+//    lhs.h += rhs.h
+//    lhs.i += rhs.i
+//  }
   
   @inlinable
   static func -(
@@ -88,20 +88,20 @@ public extension AlgebraicProduct9
     )
   }
   
-  @inlinable
-  static func -=(
-    lhs: inout Self,
-    rhs: Self) {
-    lhs.a -= rhs.a
-    lhs.b -= rhs.b
-    lhs.c -= rhs.c
-    lhs.d -= rhs.d
-    lhs.e -= rhs.e
-    lhs.f -= rhs.f
-    lhs.g -= rhs.g
-    lhs.h -= rhs.h
-    lhs.i -= rhs.i
-  }
+//  @inlinable
+//  static func -=(
+//    lhs: inout Self,
+//    rhs: Self) {
+//    lhs.a -= rhs.a
+//    lhs.b -= rhs.b
+//    lhs.c -= rhs.c
+//    lhs.d -= rhs.d
+//    lhs.e -= rhs.e
+//    lhs.f -= rhs.f
+//    lhs.g -= rhs.g
+//    lhs.h -= rhs.h
+//    lhs.i -= rhs.i
+//  }
   
 }
 

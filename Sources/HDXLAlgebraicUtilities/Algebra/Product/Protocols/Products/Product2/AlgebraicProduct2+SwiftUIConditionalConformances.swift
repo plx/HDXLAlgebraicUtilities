@@ -35,13 +35,13 @@ public extension AlgebraicProduct2
     )
   }
   
-  @inlinable
-  static func +=(
-    lhs: inout Self,
-    rhs: Self) {
-    lhs.a += rhs.a
-    lhs.b += rhs.b
-  }
+//  @inlinable
+//  static func +=(
+//    lhs: inout Self,
+//    rhs: Self) {
+//    lhs.a += rhs.a
+//    lhs.b += rhs.b
+//  }
   
   @inlinable
   static func -(
@@ -53,13 +53,13 @@ public extension AlgebraicProduct2
     )
   }
   
-  @inlinable
-  static func -=(
-    lhs: inout Self,
-    rhs: Self) {
-    lhs.a -= rhs.a
-    lhs.b -= rhs.b
-  }
+//  @inlinable
+//  static func -=(
+//    lhs: inout Self,
+//    rhs: Self) {
+//    lhs.a -= rhs.a
+//    lhs.b -= rhs.b
+//  }
   
 }
 

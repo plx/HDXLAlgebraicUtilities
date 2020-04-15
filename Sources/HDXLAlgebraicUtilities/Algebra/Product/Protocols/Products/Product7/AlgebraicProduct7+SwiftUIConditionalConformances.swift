@@ -50,18 +50,18 @@ public extension AlgebraicProduct7
     )
   }
   
-  @inlinable
-  static func +=(
-    lhs: inout Self,
-    rhs: Self) {
-    lhs.a += rhs.a
-    lhs.b += rhs.b
-    lhs.c += rhs.c
-    lhs.d += rhs.d
-    lhs.e += rhs.e
-    lhs.f += rhs.f
-    lhs.g += rhs.g
-  }
+//  @inlinable
+//  static func +=(
+//    lhs: inout Self,
+//    rhs: Self) {
+//    lhs.a += rhs.a
+//    lhs.b += rhs.b
+//    lhs.c += rhs.c
+//    lhs.d += rhs.d
+//    lhs.e += rhs.e
+//    lhs.f += rhs.f
+//    lhs.g += rhs.g
+//  }
   
   @inlinable
   static func -(
@@ -78,18 +78,18 @@ public extension AlgebraicProduct7
     )
   }
   
-  @inlinable
-  static func -=(
-    lhs: inout Self,
-    rhs: Self) {
-    lhs.a -= rhs.a
-    lhs.b -= rhs.b
-    lhs.c -= rhs.c
-    lhs.d -= rhs.d
-    lhs.e -= rhs.e
-    lhs.f -= rhs.f
-    lhs.g -= rhs.g
-  }
+//  @inlinable
+//  static func -=(
+//    lhs: inout Self,
+//    rhs: Self) {
+//    lhs.a -= rhs.a
+//    lhs.b -= rhs.b
+//    lhs.c -= rhs.c
+//    lhs.d -= rhs.d
+//    lhs.e -= rhs.e
+//    lhs.f -= rhs.f
+//    lhs.g -= rhs.g
+//  }
   
 }
 

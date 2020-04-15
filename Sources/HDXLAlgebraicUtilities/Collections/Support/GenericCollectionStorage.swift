@@ -7,6 +7,7 @@ import HDXLCommonUtilities
 
 @usableFromInline
 @propertyWrapper
+@frozen
 internal struct GenericCollectionStorage<C:Collection> {
   
   @inlinable
